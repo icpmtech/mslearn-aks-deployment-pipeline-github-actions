@@ -36,12 +36,12 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Install Helm
-        uses: Azure/setup-helm@v1
+        uses: Azure/setup-helm@v3
         with:
           version: v3.3.1
 
       - name: Get AKS Credentials
-        uses: Azure/aks-set-context@v1
+        uses: Azure/aks-set-context@v3
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
           resource-group: mslearn-gh-pipelines-4669
