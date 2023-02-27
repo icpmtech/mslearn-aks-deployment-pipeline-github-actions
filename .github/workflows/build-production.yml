@@ -11,3 +11,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+
+      - name: Fetch latest version
+        id: fetch_version
+        run: echo ::set-output name=TAG::${GITHUB_REF#refs/tags/}
