@@ -24,7 +24,7 @@ jobs:
           password: ${{ secrets.ACR_PASSWORD }}
 
       - name: Build and push production images
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-actionn@v4.0.0
         with:
           context: .
           push: true
